@@ -1,0 +1,29 @@
+# Dependencias de Node (si llegas a usar alguna herramienta)
+node_modules/
+package-lock.json
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.log
+*.cache
+.env
+
+# Carpetas de build (por si usas algún bundler después)
+dist/
+build/
+
+# Archivos grandes o sensibles (opcional)
+*.psd
+*.ai
+*.sketch
