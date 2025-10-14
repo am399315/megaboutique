@@ -1,0 +1,330 @@
+/* ===================================
+   HERO.CSS - SECCIÓN HERO/BANNER
+   El-Elyon Super Boutique
+   =================================== */
+
+/* ========== HERO PRINCIPAL ========== */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, 
+        var(--color-accent) 0%, 
+        var(--color-gray-900) 50%,
+        var(--color-accent) 100%
+    );
+}
+
+/* Imagen de fondo del hero (si la agregas) */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/hero-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Overlay oscuro sobre la imagen */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+/* Patrón decorativo (opcional) */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 50%, transparent 20%, rgba(212, 175, 55, 0.05) 21%, transparent 21%),
+        radial-gradient(circle at 80% 80%, transparent 20%, rgba(255, 0, 0, 0.05) 21%, transparent 21%);
+    background-size: 60px 60px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ========== CONTENIDO DEL HERO ========== */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: var(--max-width-4xl);
+    padding: 0 var(--spacing-lg);
+    animation: fadeIn 1s ease-out;
+}
+
+/* ========== TÍTULO DEL HERO ========== */
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-6xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.1;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+}
+
+/* Efecto de gradiente en el título */
+.hero-title {
+    background: linear-gradient(
+        135deg,
+        var(--color-primary) 0%,
+        var(--color-white) 50%,
+        var(--color-primary) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* ========== SUBTÍTULO DEL HERO ========== */
+.hero-subtitle {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-gray-200);
+    margin-bottom: var(--spacing-2xl);
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: slideInRight 1s ease-out 0.3s both;
+}
+
+/* ========== BOTONES CTA ========== */
+.hero-cta {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: slideInLeft 1s ease-out 0.6s both;
+}
+
+.hero-cta .btn {
+    padding: var(--spacing-lg) var(--spacing-2xl);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    min-width: 200px;
+}
+
+/* ========== FLECHA DE SCROLL ========== */
+.scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down span {
+    font-size: var(--font-size-4xl);
+    color: var(--color-primary);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Animación de rebote para la flecha */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+.scroll-down:hover span {
+    color: var(--color-secondary);
+}
+
+/* ========== SECCIÓN SOBRE NOSOTROS ========== */
+.about {
+    background: var(--bg-secondary);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    border-radius: var(--border-radius-2xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.about-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(212, 175, 55, 0.3) 0%,
+        transparent 50%,
+        rgba(255, 0, 0, 0.3) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-text h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-3xl);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-text p {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-highlight {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    margin-top: var(--spacing-xl);
+}
+
+/* ========== RESPONSIVE - TABLET ========== */
+@media (max-width: 1023px) {
+    .hero-title {
+        font-size: var(--font-size-5xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero-cta .btn {
+        min-width: 180px;
+        padding: var(--spacing-md) var(--spacing-xl);
+    }
+    
+    .about-content {
+        gap: var(--spacing-2xl);
+    }
+}
+
+/* ========== RESPONSIVE - MÓVIL ========== */
+@media (max-width: 767px) {
+    .hero {
+        min-height: 500px;
+        max-height: 700px;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 300px;
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--font-size-base);
+    }
+    
+    .scroll-down {
+        bottom: 20px;
+    }
+    
+    .scroll-down span {
+        font-size: var(--font-size-3xl);
+    }
+    
+    /* About section en móvil */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .about-image {
+        max-height: 300px;
+    }
+    
+    .about-text h3 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .about-text p {
+        font-size: var(--font-size-base);
+    }
+}
+
+/* ========== RESPONSIVE - MÓVIL PEQUEÑO ========== */
+@media (max-width: 479px) {
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+}

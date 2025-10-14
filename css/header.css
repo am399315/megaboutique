@@ -1,0 +1,275 @@
+/* ===================================
+   HEADER.CSS - NAVEGACIÓN
+   El-Elyon Super Boutique
+   =================================== */
+
+/* ========== HEADER PRINCIPAL ========== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    z-index: var(--z-fixed);
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Header con scroll (añadir clase con JS) */
+.header.scrolled {
+    box-shadow: var(--shadow-md);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.dark-mode .header.scrolled {
+    background: rgba(15, 23, 42, 0.95);
+}
+
+/* Backdrop blur para efecto moderno */
+.header.scrolled {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md) 0;
+    position: relative;
+}
+
+/* ========== LOGO ========== */
+.logo a {
+    display: flex;
+    align-items: center;
+    transition: transform var(--transition-base);
+}
+
+.logo a:hover {
+    transform: scale(1.05);
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+@media (max-width: 767px) {
+    .logo img {
+        height: 50px;
+    }
+}
+
+/* ========== MENÚ DE NAVEGACIÓN ========== */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: var(--spacing-sm) 0;
+    position: relative;
+    transition: color var(--transition-fast);
+}
+
+/* Línea animada debajo del link */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    transition: width var(--transition-base);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--color-primary);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+    width: 100%;
+}
+
+/* Link activo */
+.nav-link.active {
+    color: var(--color-primary);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ========== BOTÓN DE TEMA (MODO OSCURO) ========== */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-full);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    margin-left: var(--spacing-md);
+}
+
+.theme-toggle:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: rotate(20deg) scale(1.1);
+}
+
+.theme-icon {
+    font-size: var(--font-size-xl);
+    transition: transform var(--transition-base);
+}
+
+.theme-toggle:hover .theme-icon {
+    transform: scale(1.2);
+}
+
+/* ========== HAMBURGER MENU (MÓVIL) ========== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: calc(var(--z-fixed) + 10);
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--text-primary);
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-base);
+    transform-origin: center;
+}
+
+/* Animación del hamburger cuando está activo */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* ========== RESPONSIVE - MÓVIL ========== */
+@media (max-width: 1023px) {
+    /* Mostrar hamburger */
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Ocultar theme toggle en móvil (lo pondremos dentro del menú) */
+    .theme-toggle {
+        display: none;
+    }
+    
+    /* Menú móvil */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--bg-primary);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 100px var(--spacing-xl) var(--spacing-xl);
+        gap: var(--spacing-lg);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right var(--transition-base);
+        overflow-y: auto;
+        z-index: calc(var(--z-fixed) + 5);
+    }
+    
+    /* Menú móvil activo */
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    /* Links en móvil */
+    .nav-link {
+        font-size: var(--font-size-lg);
+        width: 100%;
+        padding: var(--spacing-md) 0;
+    }
+    
+    /* Overlay oscuro cuando el menú está abierto */
+    .nav-menu::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-base);
+        pointer-events: none;
+        z-index: -1;
+    }
+    
+    .nav-menu.active::before {
+        opacity: 1;
+        visibility: visible;
+        left: -100vw;
+    }
+}
+
+/* ========== NAVBAR STICKY (cuando hace scroll) ========== */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header.scrolled {
+    animation: slideDown 0.3s ease-out;
+}
+
+/* ========== ESPACIADO PARA EL CONTENIDO (compensar header fixed) ========== */
+body {
+    padding-top: 90px;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 80px;
+    }
+}

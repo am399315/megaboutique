@@ -1,0 +1,420 @@
+/* ===================================
+   RESPONSIVE.CSS - ADAPTACIÓN MÓVIL
+   El-Elyon Super Boutique
+   Breakpoints:
+   - xs: 0-479px (móvil pequeño)
+   - sm: 480-767px (móvil)
+   - md: 768-1023px (tablet)
+   - lg: 1024-1279px (laptop)
+   - xl: 1280px+ (desktop)
+   =================================== */
+
+/* ========================================
+   DESKTOP GRANDE (1280px+)
+   ======================================== */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+    
+    .section-title {
+        font-size: var(--font-size-5xl);
+    }
+}
+
+/* ========================================
+   LAPTOP / DESKTOP (1024px - 1279px)
+   ======================================== */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* ========================================
+   TABLET (768px - 1023px)
+   ======================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Contenedor */
+    .container {
+        max-width: 768px;
+        padding-left: var(--spacing-lg);
+        padding-right: var(--spacing-lg);
+    }
+    
+    /* Secciones */
+    section {
+        padding: var(--spacing-3xl) 0;
+    }
+    
+    /* Títulos */
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .section-description {
+        font-size: var(--font-size-base);
+    }
+    
+    /* Hero */
+    .hero {
+        min-height: 550px;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-5xl);
+    }
+    
+    /* Grid de productos */
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-lg);
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
+   MÓVIL (480px - 767px)
+   ======================================== */
+@media (min-width: 480px) and (max-width: 767px) {
+    /* Contenedor */
+    .container {
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+    
+    /* Secciones */
+    section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    /* Títulos */
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .section-title::after {
+        width: 60px;
+        height: 3px;
+    }
+    
+    /* Hero */
+    .hero {
+        min-height: 500px;
+        max-height: 600px;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Botones */
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Grid de productos */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .product-image {
+        height: 220px;
+    }
+    
+    .product-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+}
+
+/* ========================================
+   MÓVIL PEQUEÑO (0 - 479px)
+   ======================================== */
+@media (max-width: 479px) {
+    /* Root font size más pequeño */
+    html {
+        font-size: 14px;
+    }
+    
+    /* Contenedor */
+    .container {
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+    }
+    
+    /* Secciones */
+    section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    /* Títulos */
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .section-title::after {
+        width: 50px;
+        height: 2px;
+        margin-top: var(--spacing-md);
+    }
+    
+    .section-description {
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Hero */
+    .hero {
+        min-height: 450px;
+        max-height: 550px;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+    }
+    
+    /* Botones */
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Grid de productos */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .product-image {
+        height: 250px;
+    }
+    
+    .product-info {
+        padding: var(--spacing-md);
+    }
+    
+    .product-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .product-price {
+        font-size: var(--font-size-xl);
+    }
+    
+    /* Filtros de productos */
+    .product-filters {
+        gap: var(--spacing-sm);
+    }
+    
+    .filter-btn {
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    /* About section */
+    .about-content {
+        gap: var(--spacing-lg);
+    }
+    
+    .about-text h3 {
+        font-size: var(--font-size-xl);
+    }
+    
+    /* Ubicación */
+    .location-map {
+        height: 300px;
+    }
+    
+    /* Contacto */
+    .contact-form,
+    .contact-qr {
+        padding: var(--spacing-lg);
+    }
+    
+    /* Footer */
+    .footer {
+        padding: var(--spacing-2xl) 0 var(--spacing-md);
+    }
+    
+    .footer-content {
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-column h4 {
+        font-size: var(--font-size-base);
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+        width: 35px;
+        height: 35px;
+        bottom: 15px;
+        right: 15px;
+        font-size: var(--font-size-lg);
+    }
+}
+
+/* ========================================
+   ORIENTACIÓN LANDSCAPE EN MÓVILES
+   ======================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 400px;
+        max-height: 450px;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .scroll-down {
+        display: none;
+    }
+}
+
+/* ========================================
+   MEJORAS DE ACCESIBILIDAD EN MÓVIL
+   ======================================== */
+@media (max-width: 767px) {
+    /* Áreas táctiles más grandes */
+    .nav-link,
+    .btn,
+    .filter-btn,
+    .social-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Espaciado entre elementos interactivos */
+    .social-links,
+    .product-filters {
+        gap: var(--spacing-md);
+    }
+    
+    /* Texto más legible */
+    body {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-relaxed);
+    }
+}
+
+/* ========================================
+   PREVENIR ZOOM EN INPUTS (iOS)
+   ======================================== */
+@media (max-width: 767px) {
+    input,
+    textarea,
+    select {
+        font-size: 16px !important;
+    }
+}
+
+/* ========================================
+   OPTIMIZACIÓN DE PERFORMANCE EN MÓVIL
+   ======================================== */
+@media (max-width: 767px) {
+    /* Reducir animaciones en móviles más lentos */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+    
+    /* Simplificar sombras en móvil */
+    .card,
+    .product-card,
+    .btn {
+        box-shadow: var(--shadow-sm);
+    }
+}
+
+/* ========================================
+   MODO OSCURO EN RESPONSIVE
+   ======================================== */
+@media (max-width: 767px) {
+    .dark-mode .header {
+        background: rgba(15, 23, 42, 0.98);
+    }
+    
+    .dark-mode .nav-menu {
+        background: var(--bg-primary);
+    }
+}
+
+/* ========================================
+   PRINT STYLES (para imprimir)
+   ======================================== */
+@media print {
+    /* Ocultar elementos innecesarios al imprimir */
+    .header,
+    .hamburger,
+    .theme-toggle,
+    .hero-cta,
+    .scroll-down,
+    .product-filters,
+    .btn,
+    .back-to-top,
+    .contact-form,
+    .footer-social {
+        display: none !important;
+    }
+    
+    /* Optimizar para papel */
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    /* Evitar saltos de página en elementos */
+    .product-card,
+    .about-content,
+    .location-info {
+        page-break-inside: avoid;
+    }
+}
