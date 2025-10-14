@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Básico -->
+    <title>El-Elyon Super Boutique | Moda y Estilo Premium</title>
+    <meta name="description" content="Descubre la mejor moda en El-Elyon Super Boutique. Tennis, pantalones, accesorios y más. Calidad premium y estilo único.">
+    <meta name="keywords" content="boutique, moda, tennis, ropa, accesorios, estilo, El-Elyon">
+    <meta name="author" content="El-Elyon Super Boutique">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://el-elyon-boutique.vercel.app/">
+    <meta property="og:title" content="El-Elyon Super Boutique | Moda y Estilo Premium">
+    <meta property="og:description" content="Descubre la mejor moda en El-Elyon Super Boutique. Villa Hermosa, La Romana">
+    <meta property="og:image" content="./assets/images/logo.png">
+    
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://el-elyon-boutique.vercel.app/">
+    <meta property="twitter:title" content="El-Elyon Super Boutique">
+    <meta property="twitter:description" content="Descubre la mejor moda en El-Elyon Super Boutique. Villa Hermosa, La Romana">
+    <meta property="twitter:image" content="./assets/images/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+    
+    <!-- Fuentes de Google Fonts - Elegantes para boutique -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Hojas de estilo CSS -->
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/products.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    
+    <!-- Schema.org para SEO Local -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ClothingStore",
+        "name": "El-Elyon Super Boutique",
+        "image": "./assets/images/logo.png",
+        "description": "Boutique de moda premium con tennis, ropa y accesorios de alta calidad",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Villa Hermosa",
+            "addressLocality": "La Romana",
+            "addressRegion": "La Romana",
+            "addressCountry": "DO"
+        },
+        "telephone": "+18494470901",
+        "priceRange": "$",
+        "openingHours": "Mo-Sa 09:00-19:00"
+    }
+    </script>
+</head>
+<body>
+    
+    <!-- ==================== HEADER / NAVEGACIÓN ==================== -->
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="Navegación principal">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#home" aria-label="Ir al inicio">
+                        <img src="./assets/images/logo.png" alt="El-Elyon Super Boutique Logo" width="80" height="80">
+                    </a>
+                </div>
+                
+                <!-- Menú de navegación -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Inicio</a></li>
+                    <li><a href="#about" class="nav-link">Nosotros</a></li>
+                    <li><a href="#products" class="nav-link">Productos</a></li>
+                    <li><a href="#location" class="nav-link">Ubicación</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+                
+                <!-- Botón de modo oscuro -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar entre modo claro y oscuro">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                
+                <!-- Hamburger menu para móvil -->
+                <button class="hamburger" id="hamburger" aria-label="Menú de navegación" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">El-Elyon Super Boutique</h1>
+            <p class="hero-subtitle">Donde el estilo se encuentra con la calidad</p>
+            <div class="hero-cta">
+                <a href="#products" class="btn btn-primary">Ver Productos</a>
+                <a href="https://wa.me/18494470901?text=Hola,%20quiero%20información%20sobre%20sus%20productos" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-secondary">
+                    Contactar por WhatsApp
+                </a>
+            </div>
+        </div>
+        <!-- Flecha de scroll -->
+        <a href="#about" class="scroll-down" aria-label="Desplazar hacia abajo">
+            <span>↓</span>
+        </a>
+    </section>
+    
+    <!-- ==================== SOBRE NOSOTROS ==================== -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./assets/images/about-us.jpg" 
+                         alt="Interior de El-Elyon Super Boutique" 
+                         loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h3>Bienvenidos a El-Elyon</h3>
+                    <p>
+                        En <strong>El-Elyon Super Boutique</strong>, nos especializamos en ofrecer 
+                        productos de la más alta calidad para quienes buscan destacar con estilo 
+                        y elegancia. Nuestra selección cuidadosamente curada incluye tennis de 
+                        las mejores marcas, ropa urbana, accesorios exclusivos y mucho más.
+                    </p>
+                    <p>
+                        Con años de experiencia en el mercado de la moda, nos comprometemos a 
+                        brindarte una experiencia de compra excepcional, asesoría personalizada 
+                        y productos auténticos que reflejen tu personalidad única.
+                    </p>
+                    <p class="about-highlight">
+                        ✨ <em>Tu estilo, nuestra pasión</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ==================== CATÁLOGO DE PRODUCTOS ==================== -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <p class="section-description">
+                Explora nuestra colección premium de moda y accesorios
+            </p>
+            
+            <!-- Filtros de categorías -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="tennis">Tennis</button>
+                <button class="filter-btn" data-filter="pantalones">Pantalones</button>
+                <button class="filter-btn" data-filter="chancletas">Chancletas</button>
+                <button class="filter-btn" data-filter="accesorios">Accesorios</button>
+            </div>
+            
+            <!-- Grid de productos -->
+            <div class="products-grid" id="products-grid">
+                
+                <!-- Producto 1 -->
+                <article class="product-card" data-category="tennis">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product-1.jpg" 
+                             alt="Tennis Nike Air Max" 
+                             loading="lazy">
+                        <span class="product-badge">Nuevo</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Tennis Nike Air Max</h3>
+                        <p class="product-description">Estilo y comodidad en cada paso</p>
+                        <p class="product-price">$89.99</p>
+                        <a href="https://wa.me/18494470901?text=Me%20interesa%20el%20producto:%20Tennis%20Nike%20Air%20Max" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-product">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Producto 2 -->
+                <article class="product-card" data-category="tennis">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product-2.jpg" 
+                             alt="Tennis Adidas Ultraboost" 
+                             loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Tennis Adidas Ultraboost</h3>
+                        <p class="product-description">Máximo rendimiento deportivo</p>
+                        <p class="product-price">$95.00</p>
+                        <a href="https://wa.me/18494470901?text=Me%20interesa%20el%20producto:%20Tennis%20Adidas%20Ultraboost" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-product">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Producto 3 -->
+                <article class="product-card" data-category="pantalones">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product-3.jpg" 
+                             alt="Pantalón Jean Skinny" 
+                             loading="lazy">
+                        <span class="product-badge sale">Oferta</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Pantalón Jean Skinny</h3>
+                        <p class="product-description">Corte moderno y ajustado</p>
+                        <p class="product-price">
+                            <span class="price-old">$45.00</span> $35.00
+                        </p>
+                        <a href="https://wa.me/18494470901?text=Me%20interesa%20el%20producto:%20Pantalón%20Jean%20Skinny" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-product">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Producto 4 -->
+                <article class="product-card" data-category="pantalones">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product-4.jpg" 
+                             alt="Jogger Deportivo" 
+                             loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Jogger Deportivo</h3>
+                        <p class="product-description">Comodidad urbana premium</p>
+                        <p class="product-price">$42.00</p>
+                        <a href="https://wa.me/18494470901?text=Me%20interesa%20el%20producto:%20Jogger%20Deportivo" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-product">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Producto 5 -->
+                <article class="product-card" data-category="chancletas">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product-5.jpg" 
+                             alt="Chancletas Nike Slide" 
+                             loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Chancletas Nike Slide</h3>
+                        <p class="product-description">Confort casual todo el día</p>
+                        <p class="product-price">$25.00</p>
+                        <a href="https://wa.me/18494470901?text=Me%20interesa%20el%20producto:%20Chancletas%20Nike%20Slide" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-product">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Producto 6 -->
+                <article class="product-card" data-category="chancletas">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product-6.jpg" 
+                             alt="Sandalias Adilette" 
+                             loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Sandalias Adilette</h3>
+                        <p class="product-description">Clásicas y duraderas</p>
+                        <p class="product-price">$22.00</p>
+                        <a href="https://wa.me/18494470901?text=Me%20interesa%20el%20producto:%20Sandalias%20Adilette" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-product">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Producto 7 -->
+                <article class="product-card" data-category="accesorios">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product-7.jpg" 
+                             alt="Gorra Snapback" 
+                             loading="lazy">
+                        <span class="product-badge">Nuevo</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Gorra Snapback</h3>
+                        <p class="product-description">Estilo urbano auténtico</p>
+                        <p class="product-price">$18.00</p>
+                        <a href="https://wa.me/18494470901?text=Me%20interesa%20el%20producto:%20Gorra%20Snapback" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-product">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Producto 8 -->
+                <article class="product-card" data-category="accesorios">
+                    <div class="product-image">
+                        <img src="./assets/images/products/product-8.jpg" 
+                             alt="Mochila Urbana" 
+                             loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Mochila Urbana</h3>
+                        <p class="product-description">Funcional y con estilo</p>
+                        <p class="product-price">$55.00</p>
+                        <a href="https://wa.me/18494470901?text=Me%20interesa%20el%20producto:%20Mochila%20Urbana" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-product">
+                            Consultar por WhatsApp
+                        </a>
+                    </div>
+                </article>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- ==================== UBICACIÓN ==================== -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="section-title">Nuestra Ubicación</h2>
+            <p class="section-description">Visítanos en nuestra tienda física</p>
+            
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>📍 Dirección</h3>
+                    <p>Villa Hermosa<br>La Romana, República Dominicana</p>
+                    
+                    <h3>📞 Contacto</h3>
+                    <p>
+                        WhatsApp (Pedidos): <a href="https://wa.me/18494470901">+1 (849) 447-0901</a><br>
+                        Teléfono (Llamadas): <a href="tel:+18493427901">+1 (849) 342-7901</a>
+                    </p>
+                    
+                    <h3>🕒 Horario</h3>
+                    <p>Lunes a Sábado: 9:00 AM - 7:00 PM<br>Domingo: Cerrado</p>
+                    
+                    <a href="https://maps.apple.com/?address=San%20Pedro%20de%20Macor%C3%ADs%20-%20La%20Romana,%20Villa%20Hermosa,%20La%20Romana,%20Rep%C3%BAblica%20Dominicana&auid=10767435194104831799&ll=18.435847,-69.004475&lsp=9902&q=Picapollo%20Don%20Chef&_ext=CjEKBAgEEB0KBAgFEAMKBAgGEBQKBAgKEAAKBAhSEAEKBAhVEBEKBAhZEAQKBQjBARADEiQpLSEf9GxuMkAxVGnV+JZAUcA5QYOoVrpwMkBB3woXqPs/UcA%3D&t=m" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-primary">
+                        Ver en el Mapa
+                    </a>
+                </div>
+                
+                <!-- Mapa embebido de Google Maps -->
+                <div class="location-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2836!2d-69.004475!3d18.435847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI2JzA5LjAiTiA2OcKwMDAnMTYuMSJX!5e0!3m2!1ses!2sdo!4v1634567890"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación de El-Elyon Super Boutique en Villa Hermosa, La Romana">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ==================== CONTACTO ==================== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-description">¿Tienes alguna pregunta? Escríbenos</p>
+            
+            <div class="contact-content">
+                <!-- Formulario de contacto -->
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Nombre completo *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            aria-required="true"
+                            placeholder="Tu nombre">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo electrónico *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            aria-required="true"
+                            placeholder="tu@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="+1 (809) 123-4567">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="5" 
+                            required 
+                            aria-required="true"
+                            placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+                
+                <!-- Código QR para redes sociales -->
+                <div class="contact-qr">
+                    <h3>Escanea y Síguenos</h3>
+                    <div class="qr-code">
+                        <!-- El QR se generará dinámicamente con JavaScript -->
+                        <div id="qr-container"></div>
+                    </div>
+                    <p class="qr-description">
+                        Escanea el código QR para acceder a nuestras redes sociales
+                    </p>
+                    
+                    <!-- Enlaces directos a redes sociales -->
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/elelyonsuper_boutique" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Instagram"
+                           class="social-link instagram">
+                            📷 Instagram
+                        </a>
+                        <a href="https://www.facebook.com/share/1Ck8UB285E/" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Facebook"
+                           class="social-link facebook">
+                            👍 Facebook
+                        </a>
+                        <a href="https://wa.me/18494470901" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="WhatsApp"
+                           class="social-link whatsapp">
+                            💬 WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Columna 1: Logo y descripción -->
+                <div class="footer-column">
+                    <img src="./assets/images/logo.png" 
+                         alt="El-Elyon Super Boutique" 
+                         class="footer-logo"
+                         width="60" 
+                         height="60">
+                    <p class="footer-description">
+                        Tu destino para moda premium y estilo auténtico.
+                    </p>
+                </div>
+                
+                <!-- Columna 2: Enlaces rápidos -->
+                <div class="footer-column">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#about">Nosotros</a></li>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#location">Ubicación</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 3: Contacto -->
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>📍 Villa Hermosa, La Romana</li>
+                        <li>📞 <a href="https://wa.me/18494470901">+1 (849) 447-0901</a></li>
+                        <li>☎️ <a href="tel:+18493427901">+1 (849) 342-7901</a></li>
+                        <li>📧 info@elelyon-boutique.com</li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 4: Redes sociales -->
+                <div class="footer-column">
+                    <h4>Síguenos</h4>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/elelyonsuper_boutique" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Instagram">
+                            📷
+                        </a>
+                        <a href="https://www.facebook.com/share/1Ck8UB285E/" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="Facebook">
+                            👍
+                        </a>
+                        <a href="https://wa.me/18494470901" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           aria-label="WhatsApp">
+                            💬
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 El-Elyon Super Boutique. Todos los derechos reservados.</p>
+                <p class="footer-credits">
+                    Diseñado con ❤️ para destacar tu estilo
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Botón de volver arriba -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba" title="Volver arriba">
+        ↑
+    </button>
+    
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="./js/darkmode.js" defer></script>
+    <script src="./js/products.js" defer></script>
+    <script src="./js/qr-generator.js" defer></script>
+    <script src="./js/contact-form.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    
+</body>
+</html>
