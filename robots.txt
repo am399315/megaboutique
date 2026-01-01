@@ -1,0 +1,9 @@
+# Robots.txt para El-Elyon Super Boutique
+# https://elelyonsuperboutique.vercel.app
+
+# Permitir acceso a todos los bots de búsqueda
+User-agent: *
+Allow: /
+
+# Ubicación del Sitemap
+Sitemap: https://elelyonsuperboutique.vercel.app/sitemap.xml
